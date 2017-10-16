@@ -8,27 +8,65 @@
 
 <style type="text/css">
 @import url("css/index.css");
+@import url("https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css");
+@import url("https://cdn.datatables.net/buttons/1.4.2/css/buttons.dataTables.min.css");
+
+`
 </style>
 
 
-<script src="./js/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="./js/jquery-3.1.1.js"></script>
 
-<script src="./js/bootstrap.js"></script>
-
+<script type="text/javascript" src="./js/bootstrap.js"></script>
+<script type="text/javascript" src="./js/custom/asideMenu.js"></script>
 
 <link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/index.css">
+
+<script type="text/javascript">
+$("document").ready(function(){
+	var ul = $("#main-menu-ul");
+	var menuItems = menuJson.menuItems;
+	$.each(menuItems,function(k,v){
+		ul.append('<li><a href="'+v.url+'">'+v.menuName+'</a></li>');
+			
+	});
+	
+});
+</script>
 </head>
 <body>
-<div id='whole-wrapper'>
-<div id='wel'>
-<div>WELCOME</div>
 
-<div>TO</div>
-<div>START &nbsp &nbsp FRESH</div>
+<section class='container'>
+<header class='row'></header>
+<section class='row'>
+<aside>
 
-</label>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav" id='main-menu-ul'>
+      <li class="active"><a href="./index.html">HOME</a></li>
+    
+    </ul>
+  </div>
+</nav>
+
+</aside>
+<section>
+<article>
+
+</article>
+
+</section>
+</section>
+<footer class='row'></footer>
+</section>
 
 
-</div>
+
+
 </body>
 </html>
