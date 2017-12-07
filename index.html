@@ -20,10 +20,18 @@
 <script type="text/javascript" src="./js/bootstrap.js"></script>
 <script type="text/javascript" src="./js/custom/asideMenu.js"></script>
 
+<script type="text/javascript" src="js/insertMenu.js"></script>
 <link rel="stylesheet" href="./css/bootstrap.css">
 <link rel="stylesheet" href="./css/index.css">
 
 <script type="text/javascript">
+
+var rootPath =location.pathname;
+
+var lastIndex = rootPath.lastIndexOf("/");
+
+rootPath = rootPath.substring(0, lastIndex);
+
 $("document").ready(function(){
 	var ul = $("#main-menu-ul");
 	var menuItems = menuJson.menuItems;
